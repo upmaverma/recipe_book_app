@@ -1,0 +1,110 @@
+.navbar-style {
+  background-color: #03045e !important;
+}
+
+.bg {
+  background-color: #f5f4f2;
+}
+
+.banner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-size: 100% 100%;
+}
+.banner img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.banner-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Dancing Script", cursive;
+  font-size: 1.5rem;
+}
+
+.banner-content > div {
+  color: rgb(227, 227, 227);
+}
+.underline {
+  height: 3px;
+  width: 10%;
+  background-color: blue;
+  min-width: 100px;
+}
+
+.css-zow5z4-MuiGrid-root > .MuiGrid-item {
+  padding-top: 16px !important;
+}
+.css-cnd76u-MuiPaper-root {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+.css-jcfe1v-MuiContainer-root {
+  max-width: none !important;
+}
+
+.mealDrink-img {
+  width: 100%;
+
+  object-fit: contain;
+}
+
+.card-footer {
+  background: linear-gradient(45deg, black, transparent) !important;
+}
+
+.drink-card img {
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (max-width: 460px) {
+  .banner-content {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .banner-content {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .banner-content {
+    background: url("https://appstickers-cdn.appadvice.com/1231951621/835486499/8d82b28d6fe9a1d09d1c10d881fdfe92-7.gif")
+      no-repeat;
+    background-position: left;
+  }
+  .mealDrink-img {
+    height: 550px;
+  }
+  .drink-card {
+    width: 30%;
+  }
+}
+@media screen and (max-width: 855px) {
+  .css-1bzfqlc-MuiImageList-root {
+    display: block !important;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .banner-content {
+    font-size: 1.7rem;
+  }
+  .inner-div {
+    line-height: 4rem;
+  }
+}
