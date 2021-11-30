@@ -25,6 +25,13 @@ const OwnReceipe = () => {
   };
 
   const handleClose = () => {
+    setReceipeOwn({
+      receipename: "",
+      category: "",
+      ingredients: "",
+      area: "",
+      instructions: "",
+    });
     setOpen(false);
   };
 
