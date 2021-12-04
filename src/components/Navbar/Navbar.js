@@ -33,8 +33,8 @@ const Navbar = () => {
               </Link>
             </li>
             <li className="nav-item mx-1">
-              <Link className="nav-link px-2" to="/add_own_receipe">
-                Add Receipe
+              <Link className="nav-link px-2" to="/add_own_recipe">
+                Add Recipe
               </Link>
             </li>
           </ul>

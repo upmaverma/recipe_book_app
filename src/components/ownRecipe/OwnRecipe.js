@@ -8,25 +8,25 @@ import DialogTitle from "@mui/material/DialogTitle";
 
 import "../style.css";
 
-const OwnReceipe = () => {
+const OwnRecipe = () => {
   const [open, setOpen] = useState(false);
-  const [receipeOwn, setReceipeOwn] = useState({
-    receipename: "",
+  const [recipeOwn, setRecipeOwn] = useState({
+    recipename: "",
     category: "",
     area: "",
     ingredients: "",
     instructions: "",
   });
 
-  const [receipes, setReceipes] = useState([]);
+  const [recipes, setRecipes] = useState([]);
 
   const handleClickOpen = () => {
     setOpen(true);
   };
 
   const handleClose = () => {
-    setReceipeOwn({
-      receipename: "",
+    setRecipeOwn({
+      recipename: "",
       category: "",
       ingredients: "",
       area: "",
@@ -39,22 +39,22 @@ const OwnReceipe = () => {
     const name = e.target.name;
     const value = e.target.value;
 
-    setReceipeOwn({ ...receipeOwn, [name]: value });
+    setRecipeOwn({ ...recipeOwn, [name]: value });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (receipeOwn.receipename && receipeOwn.category) {
-      const receipeList = {
-        ...receipeOwn,
+    if (recipeOwn.recipename && recipeOwn.category) {
+      const recipeList = {
+        ...recipeOwn,
         id: new Date().getTime().toString(),
       };
 
-      setReceipes([...receipes, receipeList]);
+      setRecipes([...recipes, recipeList]);
     }
-    setReceipeOwn({
-      receipename: "",
+    setRecipeOwn({
+      recipename: "",
       category: "",
       ingredients: "",
       area: "",
@@ -65,10 +65,10 @@ const OwnReceipe = () => {
   };
 
   const handleRemove = (id) => {
-    let filter = receipes.filter((item) => {
+    let filter = recipes.filter((item) => {
       return item.id !== id;
     });
-    setReceipes(filter);
+    setRecipes(filter);
   };
 
   return (
@@ -79,19 +79,19 @@ const OwnReceipe = () => {
         className="d-block mx-auto my-0"
         onClick={handleClickOpen}
       >
-        Add Receipe
+        Add Recipe
       </Button>
       <form>
         <Dialog open={open} onClose={handleClose}>
-          <DialogTitle>Add Your Own Receipe</DialogTitle>
+          <DialogTitle>Add Your Own Recipe</DialogTitle>
           <DialogContent>
             <TextField
               autoFocus
               margin="dense"
-              id="receipename"
-              name="receipename"
-              value={receipeOwn.receipename}
-              label="Receipe Name"
+              id="recipename"
+              name="recipename"
+              value={recipeOwn.recipename}
+              label="Recipe Name"
               type="text"
               fullWidth
               variant="standard"
@@ -102,7 +102,7 @@ const OwnReceipe = () => {
               margin="dense"
               id="category"
               name="category"
-              value={receipeOwn.category}
+              value={recipeOwn.category}
               label="Category Name"
               type="text"
               fullWidth
@@ -114,7 +114,7 @@ const OwnReceipe = () => {
               margin="dense"
               id="area"
               name="area"
-              value={receipeOwn.area}
+              value={recipeOwn.area}
               label="Area Name"
               type="text"
               fullWidth
@@ -127,7 +127,7 @@ const OwnReceipe = () => {
               margin="dense"
               id="instructions"
               name="ingredients"
-              value={receipeOwn.ingredients}
+              value={recipeOwn.ingredients}
               label="Ingredients Name"
               type="text"
               fullWidth
@@ -140,7 +140,7 @@ const OwnReceipe = () => {
               margin="dense"
               id="instructions"
               name="instructions"
-              value={receipeOwn.instructions}
+              value={recipeOwn.instructions}
               label="Instructions Name"
               type="text"
               fullWidth
@@ -161,18 +161,18 @@ const OwnReceipe = () => {
       </form>
       <div className="conatiner p-2">
         <h3>
-          Your Own Receipe Here...
+          Your Own Recipe Here...
           <img
             src="https://cdn.edu.buncee.com/assets/864ea935940063b8b3b7501e4b6599d1/animation-writing-062819.gif?timestamp=1561751636"
             alt="write gif"
             width="40"
           />
         </h3>
-        {receipes.map((item) => {
+        {recipes.map((item) => {
           return (
             <div className="card mx-2 my-3" key={item.id}>
               <div className="card-body">
-                <h5 className="card-title">Receipe Name :{item.receipename}</h5>
+                <h5 className="card-title">Recipe Name :{item.recipename}</h5>
                 <p className="card-text">Category Name :{item.category}</p>
                 <p className="card-text">Area Name :{item.area}</p>
                 <p className="card-text">Ingredients: {item.ingredients}</p>
@@ -193,4 +193,4 @@ const OwnReceipe = () => {
   );
 };
 
-export default OwnReceipe;
+export default OwnRecipe;

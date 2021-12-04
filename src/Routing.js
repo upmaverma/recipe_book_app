@@ -7,7 +7,7 @@ import MealPage from "./components/MealComponent/mealPage";
 import CategoriesBasedItems from "./components/MealComponent/categoriesBasedItems";
 import MealDescription from "./components/MealComponent/MealDescription";
 import DrinkDescription from "./components/MealComponent/DrinkDescription";
-import AddOwnReceipe from "./components/ownReceipe/OwnReceipe";
+import AddOwnRecipe from "./components/ownRecipe/OwnRecipe";
 
 const Routing = () => {
   return (
@@ -19,7 +19,7 @@ const Routing = () => {
         <Route path="/mealList/:name" element={<CategoriesBasedItems />} />
         <Route path="/mealdescription/:id" element={<MealDescription />} />
         <Route path="/drinkdescription/:id" element={<DrinkDescription />} />
-        <Route path="/add_own_receipe" element={<AddOwnReceipe />} />
+        <Route path="/add_own_recipe" element={<AddOwnRecipe />} />
       </Routes>
       <Footer />
     </BrowserRouter>

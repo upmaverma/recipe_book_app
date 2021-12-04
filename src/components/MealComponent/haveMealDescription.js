@@ -28,7 +28,7 @@ const HaveMealDescription = ({ mealDescription }) => {
           />
           <div className="card-body bg p-2 px-5 text-dark">
             <h5 className="card-title mt-3">
-              Receipe Name : {mealDescription.meals[0].strMeal}
+              Recipe Name : {mealDescription.meals[0].strMeal}
             </h5>
             <Stack
               direction={{ xs: "column", sm: "row" }}
